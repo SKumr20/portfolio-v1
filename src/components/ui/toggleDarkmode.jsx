@@ -13,14 +13,14 @@ const ToggleDarkmode = () => {
   };
 
   return (
-    <Toggle onClick={toggleTheme} size="lg" className="p-2">
+    <Toggle onClick={toggleTheme} size="lg" className="p-6">
     <motion.div
         initial={{ y: 0, opacity: 1 }}
         animate={isDark ? { y: -40, opacity: 0 } : { y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="absolute"
       >
-        <Sun className="h-6 w-6 text-primary" />
+        <Sun className="scale-150 text-primary" />
       </motion.div>
 
       <motion.div
@@ -29,7 +29,7 @@ const ToggleDarkmode = () => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="absolute"
       >
-        <Moon className="h-6 w-6 text-primary" />
+        <Moon className="scale-150 text-primary" />
       </motion.div>
        
     </Toggle>

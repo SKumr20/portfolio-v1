@@ -1,15 +1,38 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa6"
 
 const Hero = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-between p-12 mx-12 md:mx-60 gap-10">
+    <div className="flex flex-col-reverse md:flex-row justify-between items-center p-12 mx-12 md:mx-60 gap-6">
       {/* Hero Content div */}
-      <div className="mb-6 flex flex-col gap-y-2 text-center md:text-start">
+      <div className="mb-6 flex flex-col text-center gap-y-2 md:text-start">
             <h1 className="text-4xl font-bold">Satyam Kumar</h1>
-            <h2 className="text-lg font-medium">Full Stack Engineer</h2>
-            <p>
-              Hi! I'm a Pre-final year Engineering Grad
+            <h2 className="text-lg font-medium mb-2">Full Stack Engineer</h2>
+            <p className="font-light mb-4">
+              Hi! I'm a Pre-final year Engineering Grad, passionate about web design, and creating user-friendly apps.
             </p>
+            {/* Buttons */}
+            <div className="flex justify-center md:justify-start">
+              <Link href="https://drive.google.com/file/d/108Qgk33IWUxUkq3xi_XTw8vuslPKJ7EI/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+              >
+                <button className="flex gap-2 shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+                  Resume
+                </button>
+              </Link>
+            </div>
+            {/* Socials */}
+            <div className="mt-6 flex justify-center space-x-5 md:justify-start">
+            <a href="https://github.com/SKumr20/" target="_blank">
+              <FaGithub size="24px" className="opacity-60 hover:opacity-100" />
+            </a>
+            <a href="https://www.linkedin.com/in/satyamkumr20/" target="_blank">
+              <FaLinkedin
+                size="24px"
+                className="opacity-60 hover:opacity-100"
+              />
+            </a>
+            </div>
       </div>
       {/* Image div */}
       <div>

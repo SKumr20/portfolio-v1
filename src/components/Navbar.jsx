@@ -15,7 +15,7 @@ import {
 
 const Navbar = () => {
   return (
-    <div className="flex bg-background justify-between p-10">
+    <div className="flex bg-background justify-between p-12">
         <ToggleDarkmode />
         <div className="flex justify-center items-center">
           {/* Visible on bigger devices */}

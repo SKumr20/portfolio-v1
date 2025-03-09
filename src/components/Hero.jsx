@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa6"
+import { Badge } from "./ui/badge";
+import { MapPin } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -8,7 +10,15 @@ const Hero = () => {
       {/* Hero Content div */}
       <div className="mb-6 flex flex-col text-center gap-y-2 md:text-start">
             <h1 className="text-4xl font-bold">Satyam Kumar</h1>
-            <h2 className="text-lg font-medium mb-2">Full Stack Engineer</h2>
+            {/* Title And Location */}
+            <div className="mb-4 flex flex-col md:flex-row text-center gap-y-2 items-center gap-2">
+              <h2 className="text-lg font-medium">Full Stack Engineer</h2>
+              <Badge className="gap-1">
+                <MapPin size={18} />
+                Chennai, IN
+              </Badge>
+            </div>
+
             <p className="font-light mb-4">
               Hi! I'm a Pre-final year Engineering Grad, passionate about web design, and creating user-friendly apps.
             </p>

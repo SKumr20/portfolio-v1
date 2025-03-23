@@ -17,10 +17,11 @@ const page = () => {
 
 
   return (
+    <>
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-12">
         {isLoading ? (
-          Array(2).fill(0).map((_, index) => (
+          Array(3).fill(0).map((_, index) => (
             <div key={index} className="h-full">
               <SkeletonCard />
             </div>
@@ -34,6 +35,7 @@ const page = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

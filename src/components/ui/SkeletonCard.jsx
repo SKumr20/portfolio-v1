@@ -5,7 +5,6 @@ export function SkeletonCard() {
     <div className="flex flex-col space-y-4 w-full h-full p-4 border rounded-lg">
       {/* Header - Company logo and duration */}
       <div className="flex justify-between items-center">
-        <Skeleton className="h-10 w-10 rounded-md" /> {/* Company logo */}
         <Skeleton className="h-4 w-24" /> {/* Duration */}
       </div>
       

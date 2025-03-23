@@ -54,14 +54,12 @@ const Navbar = () => {
                 </SheetClose>
               </Link>
               
-              {/* Projects */}
               <SheetClose asChild>
                 <Button variant="link" className="text-md font-light w-full justify-center">
                   Projects
                 </Button>
               </SheetClose>
               
-              {/* Experience - Move Link outside SheetClose */}
               <Link href='/experience' className="w-full text-center">
                 <SheetClose asChild>
                   <Button variant="link" className="text-md font-light w-full justify-center">

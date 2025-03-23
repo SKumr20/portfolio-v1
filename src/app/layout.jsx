@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
       <ThemeProvider>
         <body className={inter.className}>
           <Navbar />
-          <Hero />
           <main>
           {children}  
           </main>

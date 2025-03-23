@@ -2,7 +2,7 @@
 import React from "react";
 import ToggleDarkmode from "./ui/toggleDarkmode";
 import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
+import { LinkIcon, Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -10,7 +10,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet";
+import Link from "next/link";
 
 
 const Navbar = () => {
@@ -21,13 +22,17 @@ const Navbar = () => {
           {/* Visible on bigger devices */}
           <div className="hidden md:flex justify-center items-center"> 
             <Button variant="link" className="text-md font-light">
-              Home
+              <Link href='/'>
+                Home
+              </Link>
             </Button>
             <Button variant="link" className="text-md font-light">
               Projects
             </Button>
             <Button variant="link" className="text-md font-light">
-              Experience
+              <Link href='/experience'>
+                Experience
+              </Link>
             </Button>
             <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
               Connect
@@ -44,13 +49,17 @@ const Navbar = () => {
             <SheetContent>
               <div className="flex flex-col p-6 ">
                 <Button variant="link" className="text-md font-light">
-                  Home
+                  <Link href='/'>
+                    Home
+                  </Link>
                 </Button>
                 <Button variant="link" className="text-md font-light">
                   Projects
                 </Button>
                 <Button variant="link" className="text-md font-light">
-                  Experience
+                  <Link href='/experience'>
+                    Experience
+                  </Link>
                 </Button>
                 <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
                   Connect

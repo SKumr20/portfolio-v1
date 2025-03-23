@@ -6,7 +6,7 @@ import { MapPin } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-between items-center p-12 mx-12 md:mx-60 gap-6">
+    <div className="flex flex-col-reverse md:flex-row justify-between items-center p-12 mx-6 md:mx-60 gap-6">
       {/* Hero Content div */}
       <div className="mb-6 flex flex-col text-center gap-y-2 md:text-start">
             <h1 className="text-4xl font-bold">Satyam Kumar</h1>

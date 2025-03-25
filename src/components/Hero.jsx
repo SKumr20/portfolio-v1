@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="flex flex-col-reverse md:flex-row justify-between items-center p-12 mx-6 md:mx-60 gap-6 mb-20">
       {/* Hero Content div */}
-      <div className="mb-6 flex flex-col text-center gap-y-2 md:text-start">
+      <div className="flex flex-col text-center gap-y-2 md:text-start">
             <h1 className="text-4xl font-bold">Satyam Kumar</h1>
             {/* Title And Location */}
             <div className="mb-4 flex flex-col md:flex-row text-center gap-y-2 items-center gap-2">

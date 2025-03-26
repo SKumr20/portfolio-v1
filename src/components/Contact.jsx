@@ -40,7 +40,7 @@ const Contact = () => {
         {
           name: values.name,
           email: values.email,
-          message: values.message,
+          message: values.message,  
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );

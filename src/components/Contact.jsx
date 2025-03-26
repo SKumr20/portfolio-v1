@@ -1,5 +1,5 @@
 "use client";
-
+import emailjs from "@emailjs/browser";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -32,8 +32,25 @@ const Contact = () => {
     },
   });
 
-  const handleSubmit = (values) => {
-    console.log(values);
+  const handleSubmit = async (values) => {
+    try {
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
+      
+      console.log("Email sent successfully!", response);
+      alert("Your message has been sent!");
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      alert("Oops! Something went wrong.");
+    }
   };
 
   return (

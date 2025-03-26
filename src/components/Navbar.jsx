@@ -17,16 +17,16 @@ const Navbar = () => {
       <ToggleDarkmode />
       <div className="flex justify-center items-center">
         {/* Visible on bigger devices */}
-        <div className="hidden md:flex justify-center items-center">
-          <Button variant="link" className="text-md font-light">
+        <div className="hidden md:flex justify-center items-center gap-4">
+          <Button variant="ghost" className="text-md font-light">
             <Link href='/'>
               Home
             </Link>
           </Button>
-          <Button variant="link" className="text-md font-light">
+          <Button variant="ghost" className="text-md font-light">
             Projects
           </Button>
-          <Button variant="link" className="text-md font-light">
+          <Button variant="ghost" className="text-md font-light">
             <Link href='/experience'>
               Experience
             </Link>
@@ -45,24 +45,23 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent>
             <div className="flex flex-col items-center p-6 w-full space-y-4">
-              {/* Home - Move Link outside SheetClose */}
               <Link href='/' className="w-full text-center">
                 <SheetClose asChild>
-                  <Button variant="link" className="text-md font-light w-full justify-center">
+                  <Button variant="ghost" className="text-md font-light w-full justify-center">
                     Home
                   </Button>
                 </SheetClose>
               </Link>
               
               <SheetClose asChild>
-                <Button variant="link" className="text-md font-light w-full justify-center">
+                <Button variant="ghost" className="text-md font-light w-full justify-center">
                   Projects
                 </Button>
               </SheetClose>
               
               <Link href='/experience' className="w-full text-center">
                 <SheetClose asChild>
-                  <Button variant="link" className="text-md font-light w-full justify-center">
+                  <Button variant="ghost" className="text-md font-light w-full justify-center">
                     Experience
                   </Button>
                 </SheetClose>

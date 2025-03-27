@@ -4,6 +4,7 @@ import Navbar from "@/components/sections/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner"
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
+import Footer from "@/components/sections/Footer";
 
 const inter = Inter({subsets: ['latin']});
 
@@ -15,17 +16,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ThemeProvider>
-        <body className={inter.className}>
-          <ScrollProgress />
-          <Navbar />
-          <main>
-          {children}  
-          </main>
-          <Toaster />
-        </body>
-      </ThemeProvider>
-
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <ThemeProvider>
+          <div className="flex flex-col min-h-screen">
+            <ScrollProgress />
+            <Navbar />
+            <main className="flex-grow">
+              {children}  
+            </main>
+            <Toaster />
+            <Footer />
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

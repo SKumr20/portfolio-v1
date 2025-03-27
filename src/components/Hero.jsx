@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa6"
 import { Badge } from "./ui/badge";
 import { MapPin } from "lucide-react";
+import { links } from "@/data/links";
 
 const Hero = () => {
   return (
@@ -24,7 +25,7 @@ const Hero = () => {
             </p>
             {/* Buttons */}
             <div className="flex justify-center md:justify-start">
-              <Link href="https://drive.google.com/file/d/108Qgk33IWUxUkq3xi_XTw8vuslPKJ7EI/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+              <Link href={links.socials.resume} target="_blank" rel="noopener noreferrer"
               >
                 <button className="flex gap-2 shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
                   Resume
@@ -33,10 +34,10 @@ const Hero = () => {
             </div>
             {/* Socials */}
             <div className="mt-6 flex justify-center space-x-5 md:justify-start">
-            <a href="https://github.com/SKumr20/" target="_blank">
+            <a href={links.socials.github} target="_blank">
               <FaGithub size="24px" className="opacity-60 hover:opacity-100" />
             </a>
-            <a href="https://www.linkedin.com/in/satyamkumr20/" target="_blank">
+            <a href={links.socials.linkedin} target="_blank">
               <FaLinkedin
                 size="24px"
                 className="opacity-60 hover:opacity-100"

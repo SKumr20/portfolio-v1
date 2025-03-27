@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
+import { toast } from "sonner";
 
 // Define form schema in zod
 const formSchema = z.object({
@@ -46,10 +47,16 @@ const Contact = () => {
       );
       
       console.log("Email sent successfully!", response);
-      alert("Your message has been sent!");
+      toast.success("Your message has been sent!", {
+        description: "I'll get back to you as soon as possible!",
+        closeButton: true
+      });
     } catch (error) {
       console.error("Failed to send email:", error);
-      alert("Oops! Something went wrong.");
+      toast.success("Oops! Something went wrong."), {
+        description: "Unknown error!",
+        closeButton: true,
+      };
     }
   };
 

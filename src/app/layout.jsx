@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Hero from "@/components/Hero";
 import { Toaster } from "@/components/ui/sonner"
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
 const inter = Inter({subsets: ['latin']});
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ThemeProvider>
         <body className={inter.className}>
+          <ScrollProgress />
           <Navbar />
           <main>
           {children}  

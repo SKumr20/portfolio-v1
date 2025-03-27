@@ -61,7 +61,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="mx-6 md:mx-60 p-12">
+    <div>
         <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
             {/* Name Field */}

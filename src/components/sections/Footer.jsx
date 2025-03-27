@@ -10,9 +10,9 @@ const Footer = () => {
 
   useEffect(() => {
     const getStats = async () => {
-        const stats = await fetchGitHubStats('Skumr20', 'portfolio-v1');
+        const stats = await fetchGitHubStats('SKumr20', 'portfolio-v1');
         setStars(stats.stars);
-        setStars(stats.forks);
+        setForks(stats.forks);
     };
 
     getStats();

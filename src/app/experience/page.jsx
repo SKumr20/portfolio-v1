@@ -1,5 +1,5 @@
 "use client";
-import Experience from "@/components/Experience";
+import Experience from "@/components/sections/Experience";
 import { experience } from "@/data/experience";
 import { SkeletonCard } from "@/components/ui/SkeletonCard";
 import { useState, useEffect } from "react";

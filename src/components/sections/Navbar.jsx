@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
-import ToggleDarkmode from "./ui/toggleDarkmode";
-import { Button } from "./ui/button";
+import ToggleDarkmode from "../ui/toggleDarkmode";
+import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
 import {
   Sheet,

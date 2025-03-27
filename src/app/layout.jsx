@@ -1,8 +1,7 @@
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/sections/Navbar";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import Hero from "@/components/Hero";
 import { Toaster } from "@/components/ui/sonner"
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 

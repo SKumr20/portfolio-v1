@@ -19,7 +19,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="w-full bg-background py-4 mt-auto flex justify-between items-center px-16">
+    <footer className="w-full bg-background py-4 mt-auto flex flex-col md:flex-row gap-2 justify-between items-center px-16">
       <div className="flex-grow-0">
         <p className="text-sm text-foreground flex items-center gap-1">
           <span>With</span>

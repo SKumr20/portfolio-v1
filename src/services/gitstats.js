@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { headers } from 'next/headers';
 
 // fetches github stars and forks
 
@@ -8,9 +7,11 @@ export const fetchGitHubStats = async (username, repo) => {
     const token = process.env.NEXT_PUBLIC_GITHUB_TOKEN;
     const response = await axios.get(
       `https://api.github.com/repos/${username}/${repo}`,
-      headers: token ? {
-        Authorization: `token ${token}`
-      } : {}
+      {
+        headers: token ? {
+          Authorization: `token ${token}`
+        } : {}
+      }
     );
     
     return {

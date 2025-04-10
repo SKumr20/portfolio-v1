@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      {
+        "source": "/SKumr20.github.io/:path*",
+        "destination": "https://SKumr20.github.io/:path*",
+        "permanent": false
+      }
+    ]
+  }
+  

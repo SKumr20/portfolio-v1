@@ -21,7 +21,7 @@ const Hero = () => {
             </div>
 
             <p className="font-light mb-4">
-              Hi! I'm a Pre-final year Engineering Grad, passionate about web design, and creating user-friendly apps.
+              Hi! I'm a Pre-final year Engineering Grad, full-stack developer, and hobby-guitarist.
             </p>
             {/* Buttons */}
             <div className="flex justify-center md:justify-start">

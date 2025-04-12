@@ -1,5 +1,4 @@
 "use client";
-import emailjs from "@emailjs/browser";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -14,7 +13,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
-import { toast } from "sonner";
+import { sendContactForm } from "@/services/contact-form";
 
 // Define form schema in zod
 const formSchema = z.object({
@@ -33,85 +32,55 @@ const Contact = () => {
     },
   });
 
-  const handleSubmit = async (values) => {
-    try {
-      const response = await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        {
-          name: values.name,
-          email: values.email,
-          message: values.message,  
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      );
-      
-      console.log("Email sent successfully!", response);
-      toast.success("Your message has been sent!", {
-        description: "I'll get back to you as soon as possible!",
-        closeButton: true
-      });
-    } catch (error) {
-      console.error("Failed to send email:", error);
-      toast.success("Oops! Something went wrong."), {
-        description: "Unknown error!",
-        closeButton: true,
-      };
-    }
-  };
-
   return (
-    <div className="max-w-lg p-6 rounded-xl shadow-lg bg-background border border-border">
-        <Form {...form}>
-        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
-            {/* Name Field */}
-            <FormField
+    <div className="w-72 max-w-2xl p-6 rounded-xl shadow-lg bg-background border border-border">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(sendContactForm)} className="space-y-8">
+          <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
-                <FormItem>
+              <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                    <Input placeholder="Your Name" {...field} />
+                  <Input placeholder="Your Name" {...field} />
                 </FormControl>
                 <FormMessage />
-                </FormItem>
+              </FormItem>
             )}
-            />
+          />
 
-            {/* Email Field */}
-            <FormField
+          <FormField
             control={form.control}
             name="email"
             render={({ field }) => (
-                <FormItem>
+              <FormItem>
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                    <Input placeholder="Your Email" type="email" {...field} />
+                  <Input placeholder="Your Email" type="email" {...field} />
                 </FormControl>
                 <FormMessage />
-                </FormItem>
+              </FormItem>
             )}
-            />
+          />
 
-            {/* Message Field */}
-            <FormField
+          <FormField
             control={form.control}
             name="message"
             render={({ field }) => (
-                <FormItem>
+              <FormItem>
                 <FormLabel>Message</FormLabel>
                 <FormControl>
-                    <Textarea placeholder="Your Message" {...field} />
+                  <Textarea placeholder="Your Message" {...field} />
                 </FormControl>
                 <FormMessage />
-                </FormItem>
+              </FormItem>
             )}
-            />
+          />
 
-            <Button type="submit">Submit</Button>
+          <Button type="submit">Submit</Button>
         </form>
-        </Form>
+      </Form>
     </div>
   );
 };

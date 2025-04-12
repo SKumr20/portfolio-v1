@@ -78,7 +78,7 @@ const Contact = () => {
             )}
           />
 
-          <Button type="submit">Submit</Button>
+          <Button className="w-full justify-center" type="submit">Submit</Button>
         </form>
       </Form>
     </div>

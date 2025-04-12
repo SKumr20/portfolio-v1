@@ -61,7 +61,7 @@ const Contact = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-lg p-6 rounded-xl shadow-lg bg-background border border-border">
         <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
             {/* Name Field */}

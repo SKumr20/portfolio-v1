@@ -10,6 +10,7 @@ const TechStack = () => {
             </AuroraText>
         </h1>
         <TechCards />
+        
     </div>
   )
 }

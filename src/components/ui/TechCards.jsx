@@ -16,17 +16,18 @@ const techs = [
 
 const TechCards = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-      {techs.map((tech) => (
-        <GlareCard
-          key={tech.name}
-          className="flex flex-col items-center justify-center flex-shrink-0"
-        >
-          <div className="text-white text-3xl">{tech.icon}</div>
-          <p className="text-white font-bold text-lg mt-4">{tech.name}</p>
-        </GlareCard>
-      ))}
-    </div>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-x-20 md:gap-x-10 justify-items-center">
+  {techs.map((tech) => (
+    <GlareCard
+      key={tech.name}
+      className="flex flex-col items-center justify-center flex-shrink-0"
+    >
+      <div className="text-white text-3xl">{tech.icon}</div>
+      <p className="text-white font-bold text-lg mt-4">{tech.name}</p>
+    </GlareCard>
+  ))}
+</div>
+
   )
 }
 

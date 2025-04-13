@@ -1,5 +1,6 @@
 import { AuroraText } from "../magicui/aurora-text";
 import TechCards from "../ui/TechCards";
+import TechPins from "../ui/TechPins";
 
 const TechStack = () => {
   return (
@@ -10,7 +11,7 @@ const TechStack = () => {
             </AuroraText>
         </h1>
         <TechCards />
-        
+        <TechPins />
     </div>
   )
 }

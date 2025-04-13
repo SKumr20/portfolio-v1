@@ -46,7 +46,7 @@ const Hero = () => {
             </div>
       </div>
       {/* Image div */}
-      <div className="min-w-[300px] w-[300px] h-[300px] relative">
+      <div className="min-w-[280px] w-[280px] h-[280px] relative">
         <Image
           src="/images/Hero.jpg"
           alt="Picture of the author"

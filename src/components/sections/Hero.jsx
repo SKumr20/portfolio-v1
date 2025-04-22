@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa6"
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6"
 import { Badge } from "../ui/badge";
 import { MapPin } from "lucide-react";
 import { links } from "@/data/links";
+import { LinkPreview } from "../ui/link-preview";
 
 const Hero = () => {
   return (
@@ -25,24 +26,30 @@ const Hero = () => {
             </p>
             {/* Buttons */}
             <div className="flex justify-center md:justify-start">
-              <Link href={links.socials.resume} target="_blank" rel="noopener noreferrer"
-              >
+
+              <LinkPreview url={links.socials.resume}>
                 <button className="flex gap-2 shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
                   Resume
                 </button>
-              </Link>
+              </LinkPreview>
             </div>
             {/* Socials */}
-            <div className="mt-6 flex justify-center space-x-5 md:justify-start">
-            <a href={links.socials.github} target="_blank">
+            <div className="mt-6 flex justify-center gap-5 md:justify-start">
+            <LinkPreview url={links.socials.github} target="_blank">
               <FaGithub size="24px" className="opacity-60 hover:opacity-100" />
-            </a>
-            <a href={links.socials.linkedin} target="_blank">
+            </LinkPreview>
+            <Link href={links.socials.linkedin} target="_blank">
               <FaLinkedin
                 size="24px"
                 className="opacity-60 hover:opacity-100"
               />
-            </a>
+            </Link>
+            <Link href={links.socials.twitter} target="_blank">
+              <FaTwitter
+                size="24px"
+                className="opacity-60 hover:opacity-100"
+              />
+            </Link>
             </div>
       </div>
       {/* Image div */}

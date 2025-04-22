@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="flex bg-background justify-between p-12">
+    <div className="flex bg-background justify-between p-6  md:p-12">
       <ToggleDarkmode />
       <div className="flex justify-center items-center">
         {/* Visible on bigger devices */}
@@ -31,7 +31,12 @@ const Navbar = () => {
               Experience
             </Link>
           </Button>
-          <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400">
+          <button 
+          onClick={() => {
+            document.getElementById('contactArea')?.scrollIntoView({ behavior: 'smooth'})
+          }}
+          className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400"
+          >
             Connect
           </button>
         </div>
@@ -69,10 +74,18 @@ const Navbar = () => {
               
               {/* Connect */}
               <SheetClose asChild>
-                <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 mt-2">
+                <button 
+                  className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 mt-2"
+                  onClick={() => {
+                    setTimeout(() => {
+                      document.getElementById('contactArea')?.scrollIntoView({ behavior: 'smooth' });
+                    }, 300);  // Wait for Sheet animation to finish
+                  }}
+                >
                   Connect
                 </button>
               </SheetClose>
+
             </div>
           </SheetContent>
         </Sheet>

@@ -1,16 +1,16 @@
 import { GlareCard } from "./glare-card";
 import { RiNextjsFill } from "react-icons/ri";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiJavascript, SiAppwrite, SiFirebase } from "react-icons/si";
+import { SiTailwindcss, SiJavascript, SiExpress, SiTypescript } from "react-icons/si";
 
 const techs = [
   { name: "NextJS", icon: <RiNextjsFill /> },
   { name: "ReactJS", icon: <FaReact /> },
   { name: "TailwindCSS", icon: <SiTailwindcss /> },
   { name: "JavaScript", icon: <SiJavascript /> },
+  { name: "TypeScript", icon: <SiTypescript /> },
   { name: "NodeJS", icon: <FaNodeJs /> },
-  { name: "Appwrite", icon: <SiAppwrite /> },
-  { name: "Firebase", icon: <SiFirebase /> },
+  { name: "Express", icon: <SiExpress /> },
   { name: "Git", icon: <FaGitAlt /> },
 ]
 

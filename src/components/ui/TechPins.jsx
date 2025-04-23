@@ -38,10 +38,6 @@ const TechPins = () => {
                 <SiVercel className="scale-125"/>
                 Vercel
             </Badge>
-            <Badge className="flex justify-center items-center gap-2">
-                <SiFirebase className="scale-125"/>
-                Firebase
-            </Badge>
         </div>
     </div>
   )

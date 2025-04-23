@@ -5,10 +5,19 @@ import { Badge } from "../ui/badge";
 import { MapPin } from "lucide-react";
 import { links } from "@/data/links";
 import { LinkPreview } from "../ui/link-preview";
+import * as motion from "motion/react-client";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-between items-center p-12 mx-12 md:mx-60 gap-6 mb-20">
+    <motion.div 
+    initial={{ opacity: 0, y: 100, filter: 'blur(10px)' }}
+      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+      viewport={{ once: false, amount: 0.2 }} // "once: false - trigger everytime the element is in view
+      transition={{
+        duration: 1,
+        ease: [0.43, 0.13, 0.23, 0.96]
+      }}
+    className="flex flex-col-reverse md:flex-row justify-between items-center p-12 mx-12 md:mx-60 gap-6 mb-20">
       {/* Hero Content div */}
       <div className="flex flex-col text-center gap-y-2 md:gap-y-4 md:text-start">
             <h1 className="text-4xl font-bold">Satyam Kumar</h1>
@@ -62,7 +71,7 @@ const Hero = () => {
           sizes="300px"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

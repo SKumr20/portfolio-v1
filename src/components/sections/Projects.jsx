@@ -5,7 +5,7 @@ import * as motion from "motion/react-client";
 const Projects = () => {
   return (
     <motion.div
-    initial={{ opacity: 0, y: 100, filter: 'blur(10px)' }}
+    initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
       whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       viewport={{ once: false, amount: 0.2 }}
       transition={{

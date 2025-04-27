@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner"
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import Footer from "@/components/sections/Footer";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({subsets: ['latin']});
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
             </main>
             <Toaster />
             <Footer />
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
